@@ -1,0 +1,14 @@
+.button-component {
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: #b4b2b2;
+}
+
+.button-component:hover {
+  background-color: white;
+}
