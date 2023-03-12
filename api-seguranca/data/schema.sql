@@ -9,12 +9,10 @@ CREATE TABLE usuario (
 	telefone VARCHAR(15),
 	senha VARCHAR(500) NOT NULL,
 	foto TEXT NOT NULL,
-	funcao VARCHAR(15) NOT null,
 	criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	atualizado_em TIMESTAMP,
 	ativo BOOLEAN NOT null,
 	reset_password_token varchar(50)
-	CONSTRAINT check_usuario_funcao check (funcao in ('ADMIN', 'USER'))
 );
 
 
@@ -25,7 +23,7 @@ CREATE TABLE permissao (
 );
 ALTER TABLE permissao ADD CONSTRAINT pk_permissao PRIMARY KEY (id);
 ALTER TABLE permissao ADD CONSTRAINT uk_permissao UNIQUE (funcao, usuario_id);
-ALTER TABLE permissao ADD CONSTRAINT fk_permissao_usuario FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+ALTER TABLE permissao ADD CONSTRAINT fk_permissao_usuario FOREIGN KEY (usuario_id) REFERENCES usuario;
 
 
 CREATE TABLE email (
@@ -40,3 +38,6 @@ CREATE TABLE email (
 	CONSTRAINT check_email_remetente_destinatario check (email_from != email_to),
 	CONSTRAINT check_email_status_email check (status_email in ('SUCESSO', 'ERRO'))
 );
+
+insert into permissao (funcao, usuario_id) values ('USUARIO', 2);
+
