@@ -8,9 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 import static br.com.cwi.apiseguranca.security.domain.enums.Funcao.Nomes.ADMIN;
 import static br.com.cwi.apiseguranca.security.domain.enums.Funcao.Nomes.USUARIO;
 
+
 @RestController
 @RequestMapping("/testes")
 public class TesteRolesController {
+
+    @GetMapping("/")
+    public String publico() {
+        return "Você está vendo essa mensagem pq ela é publica";
+    }
 
     @Secured(USUARIO)
     @GetMapping("/user")

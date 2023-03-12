@@ -12,7 +12,7 @@ export function UsuarioComponent({ usuario }) {
                     <p>Telefone: {usuario?.telefone}</p>
                     <p>Criando em: {exibirDataEHora(usuario?.criadoEm)}</p>
                     <p>Atualizado em: {usuario?.atualizadoEm ? exibirDataEHora(usuario.atualizadoEm) : "Nunca atualizado"}</p>
-                    <p>Função: {usuario?.funcao}</p>
+                    <p>permissoes: {usuario.permissoes.map(permissao => permissao.nome.split("_")[1] + ", ")}</p>
                 </div>
                 <div className="imagem-usuario">
                     <img src={usuario.foto} alt="imagem de usuario" />

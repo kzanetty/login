@@ -11,7 +11,7 @@ function App() {
       <GlobalUsuarioProvider>
         <ToastAnimated />
         <RouterProvider router={router} />
-        <Footer />
+        {/* <Footer /> */}
       </GlobalUsuarioProvider>
     </div>
   );

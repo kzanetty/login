@@ -3,9 +3,12 @@ import { NavLink } from 'react-router-dom'
 import useGlobalUsuario from '../../../context/usuario/usuario.context'
 import { useLogoutHook } from '../../../hook/logout.hook';
 import { showToast } from "../";
+import { getRolesUsuario } from '../../../utils';
+import { useEffect, useState } from 'react';
 
 export function NavListComponent() {
   const [usuario, setUsuario] = useGlobalUsuario();
+  const [rolesUsuario, setRolesUsuario] = useState([])
   const logout = useLogoutHook();
 
   async function logoutButton() {
@@ -21,6 +24,10 @@ export function NavListComponent() {
     color: '#e0cd69',
     textDecoration: 'none',
   }
+
+  useEffect(() => {
+    setRolesUsuario(getRolesUsuario(usuario));
+  }, [usuario])
 
   return (
     <nav className="navlist_container">
@@ -48,6 +55,30 @@ export function NavListComponent() {
                   <p className="button_nav_list">Editar</p>
                 </NavLink>
               </li>
+              <li className="options_nav_list_component">
+                <NavLink
+                  className="button_navlist"
+                  to="/usuario"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                >
+                  <p className="button_nav_list">Usuario</p>
+                </NavLink>
+              </li>
+
+              {
+                (rolesUsuario?.some(permissao => permissao == "ADMIN")) ?
+                  <li className="options_nav_list_component">
+                    <NavLink
+                      className="button_navlist"
+                      to="/admin"
+                      style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                    >
+                      <p className="button_nav_list">Admin</p>
+                    </NavLink>
+                  </li>
+                  : null
+              }
+
             </>
             :
             null
