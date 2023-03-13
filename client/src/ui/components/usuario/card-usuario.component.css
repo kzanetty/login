@@ -1,6 +1,6 @@
 .card-usuario {
-  height: 400px;
-  width: 700px;
+  height: 300px;
+  width: 500px;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
 }
 
 .informacoes-texto-card-usuario {
-  font-size: 20px;
+  font-size: 15px;
   height: 90%;
   width: 50%;
   display: flex;

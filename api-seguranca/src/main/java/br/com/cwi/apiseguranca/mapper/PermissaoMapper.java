@@ -8,8 +8,6 @@ public class PermissaoMapper {
     public static PermissaoResponse toResponse(Permissao permissao) {
         PermissaoResponse permissaoResponse = new PermissaoResponse();
         permissaoResponse.setNome(permissao.getFuncao().getRole());
-        permissaoResponse.setUsuario(permissao.getUsuario().getNome());
-
         return permissaoResponse;
     }
 }

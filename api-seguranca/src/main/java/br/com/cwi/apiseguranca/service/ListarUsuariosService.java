@@ -15,6 +15,7 @@ public class ListarUsuariosService {
     private UsuarioRepository usuarioRepository;
 
     public Page<UsuarioResponse> listar(Pageable pageable) {
-        return usuarioRepository.findAllByAtivo(true, pageable).map(usuario -> UsuarioMapper.toResponse(usuario));
+        return usuarioRepository.findAllByAtivo(true, pageable)
+                .map(UsuarioMapper::toResponse);
     }
 }

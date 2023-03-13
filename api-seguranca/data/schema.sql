@@ -39,5 +39,57 @@ CREATE TABLE email (
 	CONSTRAINT check_email_status_email check (status_email in ('SUCESSO', 'ERRO'))
 );
 
-insert into permissao (funcao, usuario_id) values ('USUARIO', 2);
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('puma', 'puma@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('henrique', 'henrique@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste', 'teste@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 2', 'teste2@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 3', 'teste3@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 4', 'teste4@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 5', 'teste5@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 6', 'teste6@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 7', 'teste7@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 8', 'teste8@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 9', 'teste9@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+INSERT INTO usuario(nome, email, telefone, senha, foto, criado_em, ativo)
+VALUES('teste 10', 'teste10@gmail.com', '51912345678', '$2a$10$vpa15jnEy7H8VMEkJcza/uyJdNUpMxPEwynzW0N.LHgMKJUm6D1yW', 'https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg', CURRENT_TIMESTAMP, true);
+
+
+insert into permissao (funcao, usuario_id) values ('USUARIO', 1);
+insert into permissao (funcao, usuario_id) values ('ADMIN', 1);
+insert into permissao (funcao, usuario_id) values ('ADMIN', 2);
+
+insert into permissao (funcao, usuario_id) values ('USUARIO', 3);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 4);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 5);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 6);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 7);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 8);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 9);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 10);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 11);
+insert into permissao (funcao, usuario_id) values ('USUARIO', 12);
+
 
