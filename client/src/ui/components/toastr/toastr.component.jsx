@@ -17,20 +17,20 @@ const Toast = styled(ToastContainer)`
   }
 `;
 export const showToast = ({ type, message }) => {
-    switch (type) {
-        case 'success':
-            toast.success(message);
-            break;
-        case 'warn':
-            toast.warn(message);
-            break;
-        case 'error':
-            toast.error(message);
-            break;
-        default:
-            toast.info(message);
-    }
+  switch (type) {
+    case 'success':
+      toast.success(message);
+      break;
+    case 'warn':
+      toast.warn(message);
+      break;
+    case 'error':
+      toast.error(message);
+      break;
+    default:
+      toast.info(message);
+  }
 };
 export default function ToastAnimated() {
-    return <Toast />;
+  return <Toast />;
 }

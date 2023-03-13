@@ -4,6 +4,11 @@ import { showToast } from "../ui/components";
 
 export function PrivateRouteAdmin({ Screen, roles }) {
     const [usuario] = useGlobalUsuario();
+
+    if (!usuario) {
+        return <Navigate to={"/"} />;
+    }
+
     const rolesUsuario = usuario.permissoes.map(permissao => permissao.nome.split("_")[1])
 
     if (rolesUsuario.some(role => role == roles)) {

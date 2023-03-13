@@ -9,8 +9,8 @@ a:-webkit-any-link {
 }
 
 body {
-  height: 100vh;
-  background-color: #181a1b;
+  min-height: 100vh;
+  position: relative;
 }
 
 .label-input-edicao {
